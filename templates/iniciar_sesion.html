@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=4nO5j2KG2P-HsfZSsbAbURNaqE9KYz1gkKwaz7lp4sVMohRLIQaXwrqFufzf9U7tfPaDhktF6kKJr4hzTRHd3U3CYw4uc2WzUze3PZ2iej8PZEXc_1P4Pw_mvfIOpKAE7ScTKWNx9FS7JrZYiQaaIglIlSolzE82IhkpPc7t7UJsTUVSjZRY1Z6V_esfPTwMxPrTbLe9yjKhy-umLM-kTJ-NsIqhaPbz4Bb6Vg4L0Pd_MywPzLz1YJCZUM_xSX7RQNf0dqv2NFxcjFvvosxuCeojaFcD5Tl8dA859YKPP-k" charset="UTF-8"></script><script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[url('../static/6105679.jpg')] bg-cover object-center h-screen flex items-center justify-center">
+
+    <div class=" backdrop-blur-sm bg-white/30 p-8 rounded shadow-md w-96">
+        <div class="flex justify-center items-center h-24">
+            <img src="../static/Logosinfondo.png" alt="logo">
+        </div>
+        <form action="/iniciar_sesion" method="post">
+            <div class="sm:col-span-4">
+                <label for="username" class="block text-sm font-medium leading-6 text-gray-">Cédula de identidad:</label>
+                <div class="mt-2">
+                    <div
+                        class="flex rounded-md shadow-sm ring-1 ring-inset ring-[#F8F5F2] focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29] sm:max-w-md">
+
+                        <input type="text" id="cedula_de_identidad" name="cedula_de_identidad"
+                            class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29] sm:max-w-md">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 flex justify-center" i>
+                <button type="submit" class="rounded-md bg-[#D70026]
+            px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-400
+         focus:ring-2 focus:ring-red-500">Iniciar Sesión</button>
+
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>

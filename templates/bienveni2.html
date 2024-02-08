@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=clmPEy4ntK17TUkFk_JM3wxo37zflp84bOK_alFCLeBlSJYChdqRZCL_hFiqX2nDD2BmT5VLoqOB0KFk4RZkmtqtn5idqhVtAw1FkYePWfjt24FPu6YvDdjp4uVCoc5NDPtw6k1mzXc1YYBE2UA6nbgWAH3QGGnF7JvqyE87OXF94AdxVwtcxNcta2RQrDZONfESVXaRfAzwGtm78PnnGsT49cDbhTOHidi5I3zCM9TG-XuNC18BP-4vct7zIokSEIyO5VjHF1VmE1yRJzn9Ew" charset="UTF-8"></script><style>
+        body{
+            font-family: 'Titillium Web', sans-serif;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Botón de Emergencia</title>
+</head>
+<body class="bg-gray-100">
+
+    <div class="flex flex-col justify-evenly h-screen p-8">
+        <div class="flex items-center justify-between p-8">
+            <div class="w-[45%]">
+                <img src="../static/iconollamada.webp" alt="Persona Icono" class="w-full h-auto">
+            </div>
+    
+            <!-- Contenido en la mitad izquierda -->
+            <div class="w-1/2 p-4">
+                <div class="flex justify-center">
+                    <img src="../static/cio.webp" alt="Logo" id="logo" class="">
+                </div>
+                
+                <!-- Contenido con borde y fondo -->
+                <div class="p-6 ">
+                    <p class="mb-4 text-center text-3xl font-[Titillium Web] font-bold">En caso de peligro, con solo presionar un botón, activarás un mensaje de auxilio que será enviado automáticamente a los servicios de bomberos. </p>
+                    
+                    <p class="mb-4 text-center text-3xl font-[Titillium Web] font-bold">¡Tu seguridad es nuestra prioridad!</p>
+                </div>
+
+                <div class="flex justify-center items-center space-x-8">
+                    <button type="submit" class="rounded-full bg-[#D70026]
+                    w-[30%] py-4 text-sm font-semibold text-xl text-white shadow-sm hover:bg-red-400
+                 focus:ring-2 focus:ring-red-500 ">
+                 <a href="{{ url_for('iniciar_sesion') }}">Iniciar Sesión</a>
+                </button>
+                <button type="submit" class="rounded-full bg-[#D70026]
+                    w-[30%] py-4 text-sm font-semibold text-xl text-white shadow-sm hover:bg-red-400
+                 focus:ring-2 focus:ring-red-500"> 
+                 <a href="{{ url_for('registro') }}">Registrarme</a>
+                </button>
+                </div>
+            </div>
+            
+            
+        </div>
+        <!-- Imagen "iconollamada.png" en la mitad derecha -->
+        
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=iTVxtjRYhqgMqAJqOihu6syfdK0QGVOgHyOPvLE-yEIKvTDBudg2wPmAhaLFB2Vc3vAo1xizrSCE5hr5GzKwAaeoh0JVyYcq-FV-lqcgiIa8-2zK-6U5Jg_eueCUii6wmScw2LgILW_022qWpt5w1QkxI3gMUH3kDCJEO1SbhMngSPo5Dwz_b3VR8llU6etTQT7aFUNefmNzTxzGhykt02NgAlF5eGmLBS4Tvf4Kn92F5Cz-cSMcTIOT7peZFk7rs-XCS1_muFMj2VStZld-GA" charset="UTF-8"></script><script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-[url('../static/6105679.jpg')] bg-cover object-center h-screen flex items-center justify-center">
+    <div class="backdrop-blur-sm bg-white/30 p-8 rounded shadow-md w-96">
+        <h2 class="text-2xl font-bold first-letter:first-line: first-letter:first-line: mb-4">Registro</h2>
+        <form action="/registro" method="POST">
+            <div class="mb-4">
+                <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29] sm:max-w-md">
+            </div>
+            <div class="mb-4">
+                <label for="cedula_de_identidad" class="block text-gray-700 text-sm font-bold mb-2">Cédula de Identidad</label>
+                <input type="text" id="cedula_de_identidad" name="cedula_de_identidad" class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29] sm:max-w-md">
+            </div>
+            <div class="mb-4">
+                <label for="donante_de_organos" class="block text-gray-700 text-sm font-bold mb-2">Donante de organos</label>
+                <select id="donante_de_organos" name="donante_de_organos" class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29] sm:max-w-md">
+                    <option value="Si">Sí</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="alergia_a" class="block text-gray-700 text-sm font-bold mb-2">Alergias</label>
+                <input type="text" id="alergia_a" name="alergia_a" class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29] sm:max-w-md">
+            </div>
+            <div class="mb-4">
+                <label for="tipo_de_sangre" class="block text-gray-700 text-sm font-bold mb-2">Tipo de Sangre</label>
+                <select id="tipo_de_sangre" name="tipo_de_sangre" class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29] sm:max-w-md">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+            </div>
+            <div class="mt-6 flex justify-center"i>
+                <button type="submit" class="rounded-md bg-[#D70026]
+                px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-400
+             focus:ring-2 focus:ring-red-500">Registrarse</button>
+
+    
+    
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

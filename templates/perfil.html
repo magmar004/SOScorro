@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=QsE-BuWgerdUbUI8ejMs4V8_YNZmHEvGSV8tiq0OR2wo0Vp5JMS_8XMrzp6zXbzvUhhhfDnob-ULRMpl4Wks_lkf3zcl6IUgS4BwRNQ4ZfGRBFCZyFT2uMIPlWGYxCFOMBY7pTpKab67xGK99WYAzW8dgF-uZB9C8O6KE0tR60Mpf70Vuw9njeUXUb9YQ_W9GPf7fO7CcufwbTtyZVafYRT-CrqAc-q-uBQwNSjX_1b7ItiopE_Fp4w4MxkWJhWRRB-2T3GZDI19HaraXc35Sg" charset="UTF-8"></script><script src="https://cdn.tailwindcss.com"> </script>
+    <title>perfil</title>
+</head>
+<body>
+    <form action="{{url_for('perfil', id=usuario.id)}}" method="POST">
+    <style>
+        .login_img_section {
+        background:url("/static/llamada_emergencia.2png.png");
+        background-position: center center;
+        background-size: cover;
+    }
+    </style>
+    <div class="h-screen flex">
+                <div class="hidden lg:flex w-full lg:w-1/2 login_img_section
+                justify-around items-center">
+                <div 
+                        class=" 
+                        bg-black 
+                        opacity-20 
+                        inset-0 
+                        z-0"
+                        >
+    
+                        </div>
+                <div class="w-full mx-auto px-20 flex-col items-center space-y-6">
+                </div>
+                </div>
+
+                <div class="bg-white p-8 rounded shadow-md w-[106vh]">
+                    <div class="flex flex-col justify-centerevenly h-full">
+                    
+                    <div class="flex w-full justify-between">
+
+                        <h2 class="text-center text-2xl font-bold first-letter:first-line: first-letter:first-line: mb-4">PERFIL</h2>
+                        <a href="/modificar_perfil/{{usuario.id}}"><img src="../static/configuracion.png" class="h-8" alt=""/></a>
+                    </div>
+                        <form action="/registro" method="POST" class="flex flex-col justify-between h-full">
+                            <div class="mb-4">
+                            <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29]" placeholder="{{usuario.nombre}}" readonly>
+                        </div>
+                        <div class="mb-4">
+                            <label for="cedula_de_identidad" class="block text-gray-700 text-sm font-bold mb-2">Cédula de Identidad</label>
+                            <input type="text" id="cedula_de_identidad" name="cedula_de_identidad" class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29]" placeholder="{{usuario.cedula_de_identidad}}" readonly>
+                        </div>
+                        <div class="mb-4">
+                            <label for="donante_de_organos" class="block text-gray-700 text-sm font-bold mb-2">Donante de organos</label>
+                            <input id="donante_de_organos" name="donante_de_organos" class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29]" placeholder="{{usuario.donante_de_organos}}" readonly >
+                            </input>
+                        </div>
+                        <div class="mb-4">
+                            <label for="alergia_a" class="block text-gray-700 text-sm font-bold mb-2">Alergias</label>
+                            <input type="text" id="alergia_a" name="alergia_a" class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29]" placeholder="{{usuario.alergia_a}}" readonly>
+                        </div>
+                        <div class="mb-4">
+                            <label for="tipo_de_sangre" class="block text-gray-700 text-sm font-bold mb-2">Tipo de Sangre</label>
+                            <input id="tipo_de_sangre" name="tipo_de_sangre" class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29]" placeholder="{{usuario.tipo_de_sangre}}" readonly>
+                            </input>
+                        </div>
+                        <div class="mt-6 flex justify-center"i>
+                            <button type="submit" class="rounded-md bg-[#D70026]
+                            px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-400
+                        focus:ring-2 focus:ring-red-500">VOLVER AL INICIO</button>
+
+                
+                
+                        </div>
+                    </form>
+            
+                    </div>
+                </div> 
+</body>
+</html>

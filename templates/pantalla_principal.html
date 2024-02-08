@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=lnDPp2PFW3ZFOQuLdfoyry0-SU7VV0fk4Ai7IWYvO9gbeTe8eksgVOQj-WVhYyfMEiefQy8fsonIxrI1bSAie9oqQy_Ya9XIkAl8d_ClJYI1R7dSghwvYmndgI1GvCt-DjSdqbnbas2LiqvKHKfutzztFLpRoP8TDM5gv-tuCpA_N10tljEyS6pkSXFvotkFOBd_pKQ-Ym3gnYaQb_zcveAEN7p0tHIUxvGUgspIhn5mySOlTfOQnS0wxKhl8sqtTIN6lVL2VURE7XPtN_3cYQ" charset="UTF-8"></script><script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-cover bg-no-repeat bg-[url('../static/fondo216.webp')] backdrop-blur-sm bg-white/30" style="height:100vh"
+>
+    <header class="flex justify-center items-center h-12 w-full m-0 bg-transparent">
+        <div class="flex justify-between items-center w-full max-w-6xl px-4">
+            <img id="logo" src="../static/Logosinfondo.png" alt="Logo" class="h-28">
+            <button id="btnModificarPerfil" class="bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-800"  ><a href="/perfil/{{ usuario.id }}">Perfil</a></button> 
+        </div>
+    </header>
+
+    <div class="flex justify-center mx-auto w-1/2 mt-24"> 
+        <div class="flex flex-col items-center mx-auto">
+            <img src="../static/5.png" alt="imagen1" class="mb-2 h-40">
+            <form id="miFormulario" action="/send_message" method="POST" onsubmit="enviarFormulario()">
+            <input class="hidden" type="text" id="latitud" name="latitud" readonly required>
+            <input class="hidden" type="text" id="longitud" name="longitud" readonly required>
+            
+            <button onclick="obtenerYMostrarUbicacion()" type="submit" class="rounded-lg bg-red-700 py-1 text-4xl font-semibold text-white hover:bg-red-800">VÍCTIMA</button>
+            </form>
+        </div>
+
+        <div class="flex flex-col items-center mx-auto">
+            <img src="../static/4.png" alt="imagen2" class="mb-2 h-40">
+            <button type="submit" class="rounded-lg bg-black py-1 text-4xl font-semibold text-white hover:bg-gray-800">ESPECTADOR</button>
+        </div>
+    </div>
+
+<script>
+    function obtenerYMostrarUbicacion() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(mostrarPosicion, mostrarError);
+        } else {
+            alert("La geolocalización no es compatible con este navegador.");
+        }
+    }
+
+    function mostrarPosicion(posicion) {
+        var latitud = posicion.coords.latitude;
+        var longitud = posicion.coords.longitude;
+
+        // Rellenar los campos del formulario
+        document.getElementById("latitud").value = latitud;
+        document.getElementById("longitud").value = longitud;
+
+        // Enviar automáticamente el formulario
+        document.getElementById("miFormulario").submit();
+    }
+
+    function mostrarError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                alert("El usuario denegó la solicitud de geolocalización.");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                alert("La información de ubicación no está disponible.");
+                break;
+            case error.TIMEOUT:
+                alert("Se ha agotado el tiempo de espera para obtener la ubicación.");
+                break;
+            case error.UNKNOWN_ERROR:
+                alert("Se produjo un error desconocido al intentar obtener la ubicación.");
+                break;
+        }
+    }
+    
+    function enviarFormulario() {
+        // Puedes agregar lógica adicional aquí antes de enviar el formulario si es necesario
+        alert("Formulario enviado a /send_message");
+    }
+</script>
+</body>
+</html>

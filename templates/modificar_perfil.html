@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=R4IzZv0RzH4soKUjFZ_PesAr_UpWWgK_gfjp6neuc2H301OJkHrAAkxndPzqRujkKK4uW3o011vUznQl2S6TmvIe3LRALFQRlapdWm5ZxeO0ZPLRK87bsW5s9gcYRIILs7GiIyuXlaKtx5bjhL0JkTpUPs0ao4lC9lKGYLqGEnangAF_n-BL4LPa1tgpZh4dZq5xbiM0cmYXno4TKyGXjXweSMHiF3UJeGuq4bt5fuw7pOoTfXE8bMFF1TEUrXgMqsJBqIFMSfWJd64dDcB9a9QIg70f7qunoDeZ7Q5FBSc" charset="UTF-8"></script><script src="https://cdn.tailwindcss.com"> </script>
+    <title>perfil</title>
+</head>
+<body>
+    <form action="{{url_for('modificar_perfil', id=usuario.id)}}" method="POST">
+    <style>
+        .login_img_section {
+        background:url("/static/llamada_emergencia.2png.png");
+        background-position: center center;
+        background-size: cover;
+    }
+    </style>
+    <div class="h-screen flex">
+                <div class="hidden lg:flex w-full lg:w-1/2 login_img_section
+                justify-around items-center">
+                <div 
+                        class=" 
+                        bg-black 
+                        opacity-20 
+                        inset-0 
+                        z-0"
+                        >
+    
+                        </div>
+                <div class="w-full mx-auto px-20 flex-col items-center space-y-6">
+                </div>
+                </div>
+
+                <div class="bg-white p-8 rounded shadow-md w-[106vh]">
+                    <div class="flex flex-col justify-centerevenly h-full">
+
+                    <h2 class="text-center text-2xl font-bold first-letter:first-line: first-letter:first-line: mb-4">Modificar perfil</h2>
+
+                    <form action="/registro" method="POST" class="flex flex-col justify-between h-full">
+                        <div class="mb-4">
+                            <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29]" placeholder="{{usuario.nombre}}">
+                        </div>
+                        <div class="mb-4">
+                            <label for="cedula" class="block text-gray-700 text-sm font-bold mb-2">Cédula de Identidad</label>
+                            <input type="text" id="cedula_de_identidad" name="cedula_de_identidad" class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29]" placeholder="{{usuario.cedula_de_identidad}}" >
+                        </div>
+                        <div class="mb-4">
+                            <label for="donante" class="block text-gray-700 text-sm font-bold mb-2">Donante de organos</label>
+                            <select id="donante" name="donante" class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29]">
+                                <option value="Si">Sí</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="alergia" class="block text-gray-700 text-sm font-bold mb-2">Alergias</label>
+                            <input type="text" id="alergia_a" name="alergia_a" class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29]" placeholder="{{usuario.alergia_a}}">
+                        </div>
+                        <div class="mb-4">
+                            <label for="tipo Sangre" class="block text-gray-700 text-sm font-bold mb-2">Tipo de Sangre</label>
+                            <select id="tipo Sangre" name="tipoSangre" class="w-full p-2 border border-[#F8F5F2] rounded focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#000B29]">
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                            </select>
+                        </div>
+                        <div class="mt-6 flex justify-center"i>
+                            <button type="submit" class="rounded-md bg-[#D70026]
+                            px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-400
+                        focus:ring-2 focus:ring-red-500">Modificar</button>
+            
+                
+                
+                        </div>
+                    </form>
+            
+                    </div>
+                </div> 
+</body>
+</html>
